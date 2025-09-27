@@ -40,6 +40,25 @@ icacls "C:\Windows\Resources" /grant:r %username%:F
 rem del "C:\Windows\Resources" /s /f /q
 ren "C:\Windows\Resourcesbak" "Resources"
 
+rem # Enable DWM DLLs
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmapi.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmcore.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmghost.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmredir.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmscene.dll"
+
+icacls "C:\Windows\System32\dwmapi.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmcore.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmghost.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmredir.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmscene.dll" /grant:r %username%:F
+
+ren "C:\Windows\System32\dwmapi.dll.bak" "dwmapi.dll"
+ren "C:\Windows\System32\dwmcore.dll.bak" "dwmcore.dll"
+ren "C:\Windows\System32\dwmghost.dll.bak" "dwmghost.dll"
+ren "C:\Windows\System32\dwmredir.dll.bak" "demredir.dll"
+ren "C:\Windows\System32\demscene.dll.bak" "dwmscene.dll"
+
 cd "%~dp0"
 
 call EnableShellInfrastructureHost.bat
