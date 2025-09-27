@@ -127,7 +127,9 @@ icacls "C:\Windows\System32\dwmghost.dll" /grant:r %username%:F
 icacls "C:\Windows\System32\dwmredir.dll" /grant:r %username%:F
 icacls "C:\Windows\System32\dwmscene.dll" /grant:r %username%:F
 
-ren "C:\Windows\System32\dwmapi.dll" "dwmapi.dll.bak"
+rem # FREEZES SYSTEM AFTER BOOT
+rem ren "C:\Windows\System32\dwmapi.dll" "dwmapi.dll.bak"
+
 ren "C:\Windows\System32\dwmcore.dll" "dwmcore.dll.bak"
 ren "C:\Windows\System32\dwmghost.dll" "dwmghost.dll.bak"
 ren "C:\Windows\System32\dwmredir.dll" "dwmredir.dll.bak"
@@ -150,7 +152,9 @@ icacls "C:\Windows\System32\dwmghost.dll" /grant:r %username%:F
 icacls "C:\Windows\System32\dwmredir.dll" /grant:r %username%:F
 icacls "C:\Windows\System32\dwmscene.dll" /grant:r %username%:F
 
-ren "C:\Windows\System32\dwmapi.dll.bak" "dwmapi.dll"
+rem # FREEZES SYSTEM AFTER BOOT
+rem ren "C:\Windows\System32\dwmapi.dll.bak" "dwmapi.dll"
+
 ren "C:\Windows\System32\dwmcore.dll.bak" "dwmcore.dll"
 ren "C:\Windows\System32\dwmghost.dll.bak" "dwmghost.dll"
 ren "C:\Windows\System32\dwmredir.dll.bak" "dwmredir.dll"
