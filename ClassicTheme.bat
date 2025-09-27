@@ -4,7 +4,7 @@ rem # Classic Theme (Resources folder)
 
 echo.
 echo Classic Theme (Resources folder)
-echo.
+echo
 echo 1. Enable Classic Theme
 echo 2. Disable Classic Theme
 echo 3. SKIP
@@ -17,7 +17,7 @@ if 4 EQU %ERRORLEVEL% (
 ) else if 3 EQU %ERRORLEVEL% (
    call :zkeppp
 ) else if 2 EQU %ERRORLEVEL% (
-   call :classof
+   call :classoff
 ) else if 1 EQU %ERRORLEVEL% (
    call :classon
 ) else if 0 EQU %ERRORLEVEL% (
