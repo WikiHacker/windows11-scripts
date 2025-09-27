@@ -1,12 +1,12 @@
 rem # SystemApps (UWP apps)
 
-rem # REQUIRES SAFE MODE
+rem # REQUIRES WINRE ENVIRONMENT
 
 @echo off
 
 echo.
 echo UWP Apps (SystemApps)
-echo REQUIRES SAFE MODE
+echo REQUIRES WINRE ENVIRONMENT
 echo.
 echo 1. Disable UWP Apps
 echo 2. Enable UWP Apps
