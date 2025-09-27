@@ -10,6 +10,8 @@ rem # https://youtu.be/j6_GXujgM3Y
 
 rem # SystemApps REQUIRES WINRE ENVIRONMENT
 
+rem # CLASSIC THEME MUST BE ENABLED OR GAMES RUN SLOW WHEN DWM IS DISABLED
+
 rem # Backup dwm.exe (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\System32\dwm.exe"
 icacls "C:\Windows\System32\dwm.exe" /grant:r %username%:F
