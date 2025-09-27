@@ -29,14 +29,14 @@ ren "C:\Windows\System32\DWMInit.dll.bak" "DWMInit.dll"
 
 rem # Enable UWP apps
 takeown /s %computername% /u %username% /f "C:\Windows\SystemApps" /R
-icacls "C:\Windows\SystemApps" /grant:r %username%:F
+icacls "C:\Windows\SystemApps" /grant:r %username%:F /T
 rem del "C:\Windows\SystemApps" /s /f /q
 ren "C:\Windows\SystemAppsbak" "SystemApps"
 
 rem # Enable Resources
 rem # Enable Modern Theme
 takeown /s %computername% /u %username% /f "C:\Windows\Resources" /R
-icacls "C:\Windows\Resources" /grant:r %username%:F
+icacls "C:\Windows\Resources" /grant:r %username%:F /T
 rem del "C:\Windows\Resources" /s /f /q
 ren "C:\Windows\Resourcesbak" "Resources"
 
