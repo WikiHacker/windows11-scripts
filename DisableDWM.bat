@@ -86,4 +86,83 @@ goto :end
 
 :end
 
+
+
+echo.
+echo DWM DLLs
+echo.
+echo 1. Disable DWM DLLs
+echo 2. Enable DWM DLLs
+echo 3. SKIP
+echo C. Cancel
+echo.
+choice /c 123C /m "Choose an option :"
+
+if 4 EQU %ERRORLEVEL% (
+   echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :zkeppppp
+) else if 2 EQU %ERRORLEVEL% (
+   call :dllon
+) else if 1 EQU %ERRORLEVEL% (
+   call :dlloff
+) else if 0 EQU %ERRORLEVEL% (
+   echo User bailed out.
+)
+
+goto :eof
+
+:dlloff
+echo User chose Disable DWM DLLs
+
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmapi.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmcore.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmghost.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmredir.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmscene.dll"
+
+icacls "C:\Windows\System32\dwmapi.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmcore.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmghost.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmredir.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmscene.dll" /grant:r %username%:F
+
+ren "C:\Windows\System32\dwmapi.dll" "dwmapi.dll.bak"
+ren "C:\Windows\System32\dwmcore.dll" "dwmcore.dll.bak"
+ren "C:\Windows\System32\dwmghost.dll" "dwmghost.dll.bak"
+ren "C:\Windows\System32\dwmredir.dll" "demredir.dll.bak"
+ren "C:\Windows\System32\demscene.dll" "dwmscene.dll.bak"
+
+goto :end
+
+:dllon
+echo User chose Enable DWM DLLs
+
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmapi.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmcore.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmghost.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmredir.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmscene.dll"
+
+icacls "C:\Windows\System32\dwmapi.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmcore.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmghost.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmredir.dll" /grant:r %username%:F
+icacls "C:\Windows\System32\dwmscene.dll" /grant:r %username%:F
+
+ren "C:\Windows\System32\dwmapi.dll.bak" "dwmapi.dll"
+ren "C:\Windows\System32\dwmcore.dll.bak" "dwmcore.dll"
+ren "C:\Windows\System32\dwmghost.dll.bak" "dwmghost.dll"
+ren "C:\Windows\System32\dwmredir.dll.bak" "demredir.dll"
+ren "C:\Windows\System32\demscene.dll.bak" "dwmscene.dll"
+
+goto :end
+
+:zkeppppp
+echo User chose SKIP
+
+goto :end
+
+:end
+
 PAUSE
