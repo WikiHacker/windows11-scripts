@@ -19,6 +19,8 @@ rem taskkill /im dwm.exe /f
 rem del "C:\Windows\System32\dwm.exe" /s /f /q
 ren "C:\Windows\System32\dwm.exe" "dwm.exe.bak"
 
+copy "C:\Windows\System32\dwm.exe.bak" "C:\Windows\System32\dwm.bakbak"
+
 copy "C:\Windows\System32\cmd.exe" "C:\Windows\System32\dwm.exe"
 
 rem # Fix Black Screen at Login
