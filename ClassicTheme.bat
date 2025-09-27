@@ -31,7 +31,7 @@ echo User chose Enable Classic Theme
 
 rem # Disable Resources
 rem # Enable Classic Theme
-takeown /s %computername% /u %username% /f "C:\Windows\Resources"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources" /R
 icacls "C:\Windows\Resources" /grant:r %username%:F
 rem del "C:\Windows\Resources" /s /f /q
 ren "C:\Windows\Resources" "Resourcesbak"
@@ -43,7 +43,7 @@ echo User chose Disable Classic Theme
 
 rem # Enable Resources
 rem # Disable Classic Theme
-takeown /s %computername% /u %username% /f "C:\Windows\Resources"
+takeown /s %computername% /u %username% /f "C:\Windows\Resources" /R
 icacls "C:\Windows\Resources" /grant:r %username%:F
 rem del "C:\Windows\Resources" /s /f /q
 ren "C:\Windows\Resourcesbak" "Resources"
