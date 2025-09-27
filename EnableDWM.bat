@@ -13,7 +13,7 @@ takeown /s %computername% /u %username% /f "C:\Windows\System32\dwm.exe"
 icacls "C:\Windows\System32\dwm.exe" /grant:r %username%:F
 taskkill /im dwm.exe /f
 del "C:\Windows\System32\dwm.exe" /s /f /q
-ren "C:\Windows\System32\dwm.exe.bak" "dwm.exe"
+rem ren "C:\Windows\System32\dwm.exe.bak" "dwm.exe"
 
 rem # Fix Black screen at login
 takeown /s %computername% /u %username% /f "C:\Windows\System32\Windows.UI.logon.dll"
