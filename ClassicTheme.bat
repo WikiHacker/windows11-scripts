@@ -1,5 +1,7 @@
 rem # Classic Theme (Resources folder)
 
+rem # CLASSIC THEME MUST BE ENABLED OR GAMES RUN SLOW WHEN DWM IS DISABLED
+
 @echo off
 
 echo.
