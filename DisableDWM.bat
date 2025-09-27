@@ -8,6 +8,8 @@ rem # https://youtu.be/K_4i6X5OAw8
 rem # https://youtu.be/1iXfUThaQ1Q
 rem # https://youtu.be/j6_GXujgM3Y
 
+rem # SystemApps REQUIRES SAFE MODE
+
 rem # Backup dwm.exe (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\System32\dwm.exe"
 icacls "C:\Windows\System32\dwm.exe" /grant:r %username%:F
