@@ -56,8 +56,8 @@ icacls "C:\Windows\System32\dwmscene.dll" /grant:r %username%:F
 ren "C:\Windows\System32\dwmapi.dll.bak" "dwmapi.dll"
 ren "C:\Windows\System32\dwmcore.dll.bak" "dwmcore.dll"
 ren "C:\Windows\System32\dwmghost.dll.bak" "dwmghost.dll"
-ren "C:\Windows\System32\dwmredir.dll.bak" "demredir.dll"
-ren "C:\Windows\System32\demscene.dll.bak" "dwmscene.dll"
+ren "C:\Windows\System32\dwmredir.dll.bak" "dwmredir.dll"
+ren "C:\Windows\System32\dwmscene.dll.bak" "dwmscene.dll"
 
 cd "%~dp0"
 
