@@ -130,8 +130,8 @@ icacls "C:\Windows\System32\dwmscene.dll" /grant:r %username%:F
 ren "C:\Windows\System32\dwmapi.dll" "dwmapi.dll.bak"
 ren "C:\Windows\System32\dwmcore.dll" "dwmcore.dll.bak"
 ren "C:\Windows\System32\dwmghost.dll" "dwmghost.dll.bak"
-ren "C:\Windows\System32\dwmredir.dll" "demredir.dll.bak"
-ren "C:\Windows\System32\demscene.dll" "dwmscene.dll.bak"
+ren "C:\Windows\System32\dwmredir.dll" "dwmredir.dll.bak"
+ren "C:\Windows\System32\dwmscene.dll" "dwmscene.dll.bak"
 
 goto :end
 
@@ -153,8 +153,8 @@ icacls "C:\Windows\System32\dwmscene.dll" /grant:r %username%:F
 ren "C:\Windows\System32\dwmapi.dll.bak" "dwmapi.dll"
 ren "C:\Windows\System32\dwmcore.dll.bak" "dwmcore.dll"
 ren "C:\Windows\System32\dwmghost.dll.bak" "dwmghost.dll"
-ren "C:\Windows\System32\dwmredir.dll.bak" "demredir.dll"
-ren "C:\Windows\System32\demscene.dll.bak" "dwmscene.dll"
+ren "C:\Windows\System32\dwmredir.dll.bak" "dwmredir.dll"
+ren "C:\Windows\System32\dwmscene.dll.bak" "dwmscene.dll"
 
 goto :end
 
