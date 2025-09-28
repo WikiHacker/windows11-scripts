@@ -1,10 +1,6 @@
 rem # Windows.UI.login.dll
 
-
-
 @echo off
-
-
 
 echo.
 echo Windows.UI.login.dll
