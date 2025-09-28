@@ -65,7 +65,19 @@ rem del "C:\Windows\Resources" /s /f /q
 rem ren "C:\Windows\Resourcesbak" "Resources"
 copy "C:\Windows\Resourcesbak" "C:\Windows\Resources"
 
+rem # Fix Black screen at login
+takeown /s %computername% /u %username% /f "C:\Windows\System32\Windows.UI.logon.dll"
+icacls "C:\Windows\System32\Windows.UI.logon.dll" /grant:r %username%:F
+rem taskkill /im Windows.UI.logon.dll /f
+rem del "C:\Windows\System32\Windows.UI.logon.dll" /s /f /q
+ren "C:\Windows\System32\Windows.UI.logon.dll.bak" "Windows.UI.logon.dll"
 
+rem # Fix Mouse
+takeown /s %computername% /u %username% /f "C:\Windows\System32\DWMInit.dll"
+icacls "C:\Windows\System32\DWMInit.dll" /grant:r %username%:F
+rem taskkill /im DWMInit.dll /f
+rem del "C:\Windows\System32\DWMInit.dll" /s /f /q
+ren "C:\Windows\System32\DWMInit.dll.bak" "DWMInit.dll"
 
 goto :end
 
