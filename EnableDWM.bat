@@ -12,7 +12,7 @@ rem # Restore dwm.exe (to restore run "sfc /scannow")
 takeown /s %computername% /u %username% /f "C:\Windows\System32\dwm.exe"
 icacls "C:\Windows\System32\dwm.exe" /grant:r %username%:F
 taskkill /im dwm.exe /f
-del "C:\Windows\System32\dwm.exe" /s /f /q
+rem del "C:\Windows\System32\dwm.exe" /s /f /q
 rem ren "C:\Windows\System32\dwm.exe.bak" "dwm.exe"
 
 copy "C:\Windows\System32\dwm.exe.bak" "C:\Windows\System32\dwm.exe"
