@@ -47,7 +47,7 @@ rem # Enable Resources
 rem # Disable Classic Theme
 takeown /s %computername% /u %username% /f "C:\Windows\Resources" /R
 icacls "C:\Windows\Resources" /grant:r %username%:F /T
-del "C:\Windows\Resources" /s /f /q
+rem del "C:\Windows\Resources" /s /f /q
 rem ren "C:\Windows\Resourcesbak" "Resources"
 copy "C:\Windows\Resourcesbak" "C:\Windows\Resources"
 
