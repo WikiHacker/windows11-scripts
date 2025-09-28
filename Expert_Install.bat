@@ -93,6 +93,9 @@ cd "%~dp0"
 call NoConnectedUser.bat
 cd "%~dp0"
 
+call WindowsUI_Login.bat
+cd "%~dp0"
+
 
 
 @echo off
