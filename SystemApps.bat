@@ -35,8 +35,9 @@ echo User chose Disable UWP Apps
 rem # Disable UWP apps
 takeown /s %computername% /u %username% /f "C:\Windows\SystemApps" /R
 icacls "C:\Windows\SystemApps" /grant:r %username%:F /T
-rem del "C:\Windows\SystemApps" /s /f /q
-ren "C:\Windows\SystemApps" "SystemAppsbak"
+copy "C:\Windows\SystemApps" "C:\Windows\SystemAppsbak"
+del "C:\Windows\SystemApps" /s /f /q
+rem ren "C:\Windows\SystemApps" "SystemAppsbak"
 
 goto :end
 
@@ -46,8 +47,11 @@ echo User chose Enable UWP Apps
 rem # Enable UWP apps
 takeown /s %computername% /u %username% /f "C:\Windows\SystemApps" /R
 icacls "C:\Windows\SystemApps" /grant:r %username%:F /T
-rem del "C:\Windows\SystemApps" /s /f /q
-ren "C:\Windows\SystemAppsbak" "SystemApps"
+copy "C:\Windows\SystemApps" "C:\Windows\SystemAppsbak"
+del "C:\Windows\SystemApps" /s /f /q
+rem ren "C:\Windows\SystemAppsbak" "SystemApps"
+copy "C:\Windows\SystemAppsbak" "C:\Windows\SystemApps"
+
 
 goto :end
 
