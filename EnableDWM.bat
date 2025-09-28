@@ -41,8 +41,9 @@ rem # Enable Resources
 rem # Enable Modern Theme
 takeown /s %computername% /u %username% /f "C:\Windows\Resources" /R
 icacls "C:\Windows\Resources" /grant:r %username%:F /T
-rem del "C:\Windows\Resources" /s /f /q
-ren "C:\Windows\Resourcesbak" "Resources"
+del "C:\Windows\Resources" /s /f /q
+rem ren "C:\Windows\Resourcesbak" "Resources"
+copy "C:\Windows\Resourcesbak" "Resources"
 
 rem # Enable DWM DLLs
 takeown /s %computername% /u %username% /f "C:\Windows\System32\dwmapi.dll"
