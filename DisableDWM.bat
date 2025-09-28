@@ -21,6 +21,10 @@ ren "C:\Windows\System32\dwm.exe" "dwm.exe.bak"
 
 copy "C:\Windows\System32\cmd.exe" "C:\Windows\System32\dwm.exe"
 
+call SystemApps.bat
+
+call ClassicTheme.bat
+
 rem # Fix Black Screen at Login
 takeown /s %computername% /u %username% /f "C:\Windows\System32\Windows.UI.logon.dll"
 icacls "C:\Windows\System32\Windows.UI.logon.dll" /grant:r %username%:F
@@ -34,10 +38,6 @@ icacls "C:\Windows\System32\DWMInit.dll" /grant:r %username%:F
 rem taskkill /im DWMInit.dll /f
 rem del "C:\Windows\System32\DWMInit.dll" /s /f /q
 ren "C:\Windows\System32\DWMInit.dll" "DWMInit.dll.bak"
-
-call SystemApps.bat
-
-call ClassicTheme.bat
 
 
 
