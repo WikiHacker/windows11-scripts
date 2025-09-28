@@ -38,6 +38,20 @@ icacls "C:\Windows\Resources" /grant:r %username%:F /T
 rem del "C:\Windows\Resources" /s /f /q
 ren "C:\Windows\Resources" "Resourcesbak"
 
+rem # Fix Black Screen at Login
+takeown /s %computername% /u %username% /f "C:\Windows\System32\Windows.UI.logon.dll"
+icacls "C:\Windows\System32\Windows.UI.logon.dll" /grant:r %username%:F
+rem taskkill /im Windows.UI.logon.dll /f
+rem del "C:\Windows\System32\Windows.UI.logon.dll" /s /f /q
+ren "C:\Windows\System32\Windows.UI.logon.dll" "Windows.UI.logon.dll.bak"
+
+rem # Fix Mouse
+takeown /s %computername% /u %username% /f "C:\Windows\System32\DWMInit.dll"
+icacls "C:\Windows\System32\DWMInit.dll" /grant:r %username%:F
+rem taskkill /im DWMInit.dll /f
+rem del "C:\Windows\System32\DWMInit.dll" /s /f /q
+ren "C:\Windows\System32\DWMInit.dll" "DWMInit.dll.bak"
+
 goto :end
 
 :classoff
@@ -50,6 +64,8 @@ icacls "C:\Windows\Resources" /grant:r %username%:F /T
 rem del "C:\Windows\Resources" /s /f /q
 rem ren "C:\Windows\Resourcesbak" "Resources"
 copy "C:\Windows\Resourcesbak" "C:\Windows\Resources"
+
+
 
 goto :end
 
