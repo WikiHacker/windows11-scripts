@@ -909,12 +909,15 @@ echo Windows 95 Gray Start Menu / Taskbar for High Contrast Theme
 echo.
 echo 1. Enable Win95 Gray Start Menu / Taskbar for High Contrast Theme
 echo 2. Default for Accent Theme
+echo 3. SKIP
 echo C. Cancel
 echo.
-choice /c 12C /m "Choose an option :"
+choice /c 1234C /m "Choose an option :"
 
-if 3 EQU %ERRORLEVEL% (
+if 4 EQU %ERRORLEVEL% (
    echo User chose to cancel.
+) else if 3 EQU %ERRORLEVEL% (
+   call :szciippp
 ) else if 2 EQU %ERRORLEVEL% (
    call :accent
 ) else if 1 EQU %ERRORLEVEL% (
@@ -940,6 +943,11 @@ echo User chose Default for Accent Theme
 reg add "HKCU\Control Panel\Colors" /v "Window" /t REG_SZ /d "255 255 255" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\HighContrast" /v "Window" /t REG_DWORD /d "0x00ffffff" /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\DefaultColors\Standard" /v "Window" /t REG_DWORD /d "0x00ffffff" /f
+
+goto :end
+
+:szciippp
+echo User chose SKIP
 
 goto :end
 
