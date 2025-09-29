@@ -4,6 +4,7 @@ rem # REQUIRES WINRE ENVIRONMENT
 
 rem # Microsoft.WindowsAppRuntime.vNext.CBS contains File Explorer
 rem # Microsoft.UI.Xaml.CBS causes constant screen flicker and blinking when removed
+rem # MicrosoftWindows.Client.Core causes black screen after login when removed
 
 @echo off
 
