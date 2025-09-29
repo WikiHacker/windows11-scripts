@@ -86,8 +86,10 @@ cd "%~dp0"
 call DisableServicesAMD.bat
 cd "%~dp0"
 
-rem # BORKS MACHINE WHEN RUN IN SAFE MODE
-rem call Windows11Tweaks.bat
+call DisableWindowsUpdate.bat
+cd "%~dp0"
+
+call DisableAppX.bat
 cd "%~dp0"
 
 call NoConnectedUser.bat
