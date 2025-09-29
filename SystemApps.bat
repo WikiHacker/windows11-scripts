@@ -3,6 +3,7 @@ rem # SystemApps (UWP apps)
 rem # REQUIRES WINRE ENVIRONMENT
 
 rem # Microsoft.WindowsAppRuntime.vNext.CBS contains File Explorer
+rem # Microsoft.UI.Xaml.CBS causes constant screen flicker and blinking when removed
 
 @echo off
 
