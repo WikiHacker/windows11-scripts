@@ -2,6 +2,8 @@ rem # SystemApps (UWP apps)
 
 rem # REQUIRES WINRE ENVIRONMENT
 
+rem # Microsoft.WindowsAppRuntime.vNext.CBS contains File Explorer
+
 @echo off
 
 echo.
