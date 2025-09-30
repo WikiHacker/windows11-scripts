@@ -2,6 +2,31 @@ rem # Classic Theme (Resources folder)
 
 rem # CLASSIC THEME MUST BE ENABLED OR GAMES RUN SLOW WHEN DWM IS DISABLED
 
+rem # Launch SetACL.bat to take ownership of reg keys
+cd "%~dp0"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+TIMEOUT /T 5
+
+
+
 @echo off
 
 echo.
@@ -46,11 +71,11 @@ rem del "C:\Windows\System32\Windows.UI.logon.dll" /s /f /q
 ren "C:\Windows\System32\Windows.UI.logon.dll" "Windows.UI.logon.dll.bak"
 
 rem # Fix Mouse
-takeown /s %computername% /u %username% /f "C:\Windows\System32\DWMInit.dll"
-icacls "C:\Windows\System32\DWMInit.dll" /grant:r %username%:F
-rem taskkill /im DWMInit.dll /f
-rem del "C:\Windows\System32\DWMInit.dll" /s /f /q
-ren "C:\Windows\System32\DWMInit.dll" "DWMInit.dll.bak"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwminit.dll"
+icacls "C:\Windows\System32\dwminit.dll" /grant:r %username%:F
+rem taskkill /im dwminit.dll /f
+rem del "C:\Windows\System32\dwminit.dll" /s /f /q
+ren "C:\Windows\System32\dwminit.dll" "dwminit.dll.bak"
 
 goto :end
 
@@ -73,11 +98,11 @@ rem del "C:\Windows\System32\Windows.UI.logon.dll" /s /f /q
 ren "C:\Windows\System32\Windows.UI.logon.dll.bak" "Windows.UI.logon.dll"
 
 rem # Fix Mouse
-takeown /s %computername% /u %username% /f "C:\Windows\System32\DWMInit.dll"
-icacls "C:\Windows\System32\DWMInit.dll" /grant:r %username%:F
-rem taskkill /im DWMInit.dll /f
-rem del "C:\Windows\System32\DWMInit.dll" /s /f /q
-ren "C:\Windows\System32\DWMInit.dll.bak" "DWMInit.dll"
+takeown /s %computername% /u %username% /f "C:\Windows\System32\dwminit.dll"
+icacls "C:\Windows\System32\dwminit.dll" /grant:r %username%:F
+rem taskkill /im dwminit.dll /f
+rem del "C:\Windows\System32\dwminit.dll" /s /f /q
+ren "C:\Windows\System32\dwminit.dll.bak" "dwminit.dll"
 
 goto :end
 
