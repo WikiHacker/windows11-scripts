@@ -17,7 +17,7 @@ SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn setowner -ownr n:"n:Admini
 
 SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
 
-
+cd "%~dp0"
 
 
 
