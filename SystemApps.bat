@@ -14,7 +14,6 @@ cd "%USERPROFILE%\Downloads\SetACL (executable version)\64 bit"
 
 SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn setowner -ownr n:"n:Administrators" -rec cont_obj
 
-
 SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
 
 cd "%~dp0"
