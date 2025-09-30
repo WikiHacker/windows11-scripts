@@ -1,25 +1,13 @@
 rem # Delete Windows.old directory
 
-rem # Launch SetACL.bat to take ownership of reg keys
+cd "%USERPROFILE%\Downloads\SetACL (executable version)\64 bit"
+
+SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn setowner -ownr n:"n:Administrators" -rec cont_obj
+
+SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
+
 cd "%~dp0"
-ECHO R | powershell.exe ./SetACL.bat
-cd "%USERPROFILE%\Downloads"
 
-cd "%USERPROFILE%\Downloads\windows11-scripts-main"
-ECHO R | powershell.exe ./SetACL.bat
-cd "%USERPROFILE%\Downloads"
-
-cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
-ECHO R | powershell.exe ./SetACL.bat
-cd "%USERPROFILE%\Downloads"
-
-cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
-ECHO R | powershell.exe ./SetACL.bat
-cd "%USERPROFILE%\Downloads"
-
-cd "%USERPROFILE%\Downloads\windows11-scripts"
-ECHO R | powershell.exe ./SetACL.bat
-cd "%USERPROFILE%\Downloads"
 
 
 
