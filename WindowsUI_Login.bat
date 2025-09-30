@@ -1,5 +1,30 @@
 rem # Windows.UI.login.dll
 
+rem # Launch SetACL.bat to take ownership of reg keys
+cd "%~dp0"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts-main\windows11-scripts-main"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+cd "%USERPROFILE%\Downloads\windows11-scripts"
+ECHO R | powershell.exe ./SetACL.bat
+cd "%USERPROFILE%\Downloads"
+
+TIMEOUT /T 5
+
+
+
 @echo off
 
 echo.
