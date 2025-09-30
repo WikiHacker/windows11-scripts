@@ -220,11 +220,11 @@ SetACL.exe -on "HKEY_CLASSES_ROOT\CLSID\{088e3905-0323-4b02-9826-5d99428e115f}\D
 SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Themes\Wallpaper" -ot reg -actn ace -ace "n:Administrators;p:full"
 
-SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn setowner -ownr "n:Administrators"
-SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn ace -ace "n:Administrators;p:full"
+SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn setowner -ownr "n:Administrators" -rec cont_obj
+SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
 
-SetACL.exe -on "C:\Windows.old" -ot file -actn setowner -ownr "n:Administrators"
-SetACL.exe -on "C:\Windows.old" -ot file -actn ace -ace "n:Administrators;p:full"
+SetACL.exe -on "C:\Windows.old" -ot file -actn setowner -ownr "n:Administrators" -rec cont_obj
+SetACL.exe -on "C:\Windows.old" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender\Features" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender\Features" -ot reg -actn ace -ace "n:Administrators;p:full"
@@ -308,5 +308,35 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppID\slui.exe" -ot reg -act
 
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\Gathering Manager" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\Gathering Manager" -ot reg -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\System32\dwm.exe" -ot file -actn setowner -ownr n:"n:Administrators"
+SetACL.exe -on "C:\Windows\System32\dwm.exe" -ot file -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\System32\Windows.UI.logon.dll" -ot file -actn setowner -ownr n:"n:Administrators"
+SetACL.exe -on "C:\Windows\System32\Windows.UI.logon.dll" -ot file -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\System32\dwminit.dll" -ot file -actn setowner -ownr n:"n:Administrators"
+SetACL.exe -on "C:\Windows\System32\dwminit.dll" -ot file -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\System32\dwmapi.dll" -ot file -actn setowner -ownr n:"n:Administrators"
+SetACL.exe -on "C:\Windows\System32\dwmapi.dll" -ot file -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\System32\dwmcore.dll" -ot file -actn setowner -ownr n:"n:Administrators"
+SetACL.exe -on "C:\Windows\System32\dwmcore.dll" -ot file -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\System32\dwmghost.dll" -ot file -actn setowner -ownr n:"n:Administrators"
+SetACL.exe -on "C:\Windows\System32\dwmghost.dll" -ot file -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\System32\dwmredir.dll" -ot file -actn setowner -ownr n:"n:Administrators"
+SetACL.exe -on "C:\Windows\System32\dwmredir.dll" -ot file -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\System32\dwmscene.dll" -ot file -actn setowner -ownr n:"n:Administrators"
+SetACL.exe -on "C:\Windows\System32\dwmscene.dll" -ot file -actn ace -ace "n:Administrators;p:full"
+
+SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn setowner -ownr n:"n:Administrators" -rec cont_obj
+SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
+
+SetACL.exe -on "C:\Windows\Resources" -ot file -actn setowner -ownr n:"n:Administrators" -rec cont_obj
+SetACL.exe -on "C:\Windows\Resources" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
 
 PAUSE
