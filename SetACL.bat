@@ -333,9 +333,6 @@ SetACL.exe -on "C:\Windows\System32\dwmredir.dll" -ot file -actn ace -ace "n:Adm
 SetACL.exe -on "C:\Windows\System32\dwmscene.dll" -ot file -actn setowner -ownr n:"n:Administrators"
 SetACL.exe -on "C:\Windows\System32\dwmscene.dll" -ot file -actn ace -ace "n:Administrators;p:full"
 
-SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn setowner -ownr n:"n:Administrators" -rec cont_obj
-SetACL.exe -on "C:\Windows\SystemApps" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
-
 SetACL.exe -on "C:\Windows\Resources" -ot file -actn setowner -ownr n:"n:Administrators" -rec cont_obj
 SetACL.exe -on "C:\Windows\Resources" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
 
