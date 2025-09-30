@@ -223,9 +223,6 @@ SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\The
 SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn setowner -ownr "n:Administrators" -rec cont_obj
 SetACL.exe -on "C:\WINDOWS\Fonts" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
 
-SetACL.exe -on "C:\Windows.old" -ot file -actn setowner -ownr "n:Administrators" -rec cont_obj
-SetACL.exe -on "C:\Windows.old" -ot file -actn ace -ace "n:Administrators;p:full" -rec cont_obj
-
 SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender\Features" -ot reg -actn setowner -ownr "n:Administrators"
 SetACL.exe -on "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows Defender\Features" -ot reg -actn ace -ace "n:Administrators;p:full"
 
