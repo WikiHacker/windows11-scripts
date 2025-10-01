@@ -207,5 +207,7 @@ PAUSE
 
 
 rem # Vanilla system:
-DWM: OFF / sihost: OFF / Resources: OFF / SystemApps: ON = GAME CRASH
-DWM: OFF / sihost: ON / Resources: OFF / SystemApps: ON = BROKEN
+
+rem # DWM: OFF / sihost: OFF / Resources: OFF / SystemApps: ON = GAME CRASH
+
+rem # DWM: OFF / sihost: ON / Resources: OFF / SystemApps: ON = BROKEN
