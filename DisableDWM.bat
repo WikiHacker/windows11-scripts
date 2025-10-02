@@ -213,3 +213,5 @@ rem # DWM: OFF / sihost: OFF / Resources: OFF / SystemApps: ON = GAME CRASH / VE
 rem # DWM: OFF / sihost: ON / Resources: OFF / SystemApps: ON = SYSTEM BROKEN
 
 rem # DWM: OFF / sihost: OFF / Resources: OFF / SystemApps: OFF = GAME CRASH / VERY SLOW
+
+rem # DWM: OFF / sihost: ON / Resources: OFF / SystemApps: OFF = GAME BROKEN
