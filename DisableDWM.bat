@@ -2,6 +2,8 @@ rem # Disable DWM
 
 rem # Disabling Shell Infrastructure Host (sihost.exe) makes system much slower
 
+rem # Disabling DWM borks admin rights
+
 rem # Renaming dwmapi.dll freezes system after boot
 
 rem # https://youtu.be/K_4i6X5OAw8
