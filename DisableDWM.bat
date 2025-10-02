@@ -220,4 +220,6 @@ rem # DWM: ON / sihost: ON / Resources: OFF / SystemApps: OFF = SYSTEM BROKEN
 
 rem # DWM: ON / sihost: OFF / Resources: OFF / SystemApps: OFF = SYSTEM BROKEN
 
+rem # DWM: ON / sihost: OFF / Resources: ON / SystemApps: OFF = WORKS
+
 rem # DWM: ON / sihost: ON / Resources: ON / SystemApps: OFF = WORKS
