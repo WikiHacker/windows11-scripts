@@ -218,4 +218,6 @@ rem # DWM: OFF / sihost: ON / Resources: OFF / SystemApps: OFF = GAME BROKEN
 
 rem # DWM: ON / sihost: ON / Resources: OFF / SystemApps: OFF = SYSTEM BROKEN
 
+rem # DWM: ON / sihost: OFF / Resources: OFF / SystemApps: OFF = SYSTEM BROKEN
+
 rem # DWM: ON / sihost: ON / Resources: ON / SystemApps: OFF = WORKS
