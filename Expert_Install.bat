@@ -98,6 +98,9 @@ cd "%~dp0"
 call WindowsUI_Login.bat
 cd "%~dp0"
 
+call StorAHCI.bat
+cd "%~dp0"
+
 
 
 @echo off
