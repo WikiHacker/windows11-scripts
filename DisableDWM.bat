@@ -208,6 +208,8 @@ PAUSE
 
 rem # Vanilla system:
 
+rem # DWM depends on "Windows\Resources"
+
 rem # DWM: OFF / sihost: OFF / Resources: OFF / SystemApps: ON = GAME CRASH / VERY SLOW
 
 rem # DWM: OFF / sihost: ON / Resources: OFF / SystemApps: ON = SYSTEM BROKEN
