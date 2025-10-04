@@ -78,7 +78,7 @@ echo.
 echo Shell Infrastructure Host (sihost.exe)
 echo.
 echo 1. Disable Shell Infrastructure Host (sihost.exe) (SLOW SYSTEM)
-echo 2. Enable Shell Infrastructure Host (sihost.exe)
+echo 2. Enable Shell Infrastructure Host (sihost.exe) (RECOMMENDED)
 echo 3. SKIP
 echo C. Cancel
 echo.
@@ -107,7 +107,7 @@ call DisableShellInfrastructureHost.bat
 goto :end
 
 :sion
-echo User chose Enable Shell Infrastructure Host (sihost.exe)
+echo User chose Enable Shell Infrastructure Host (sihost.exe) (RECOMMENDED)
 
 cd "%~dp0"
 call EnableShellInfrastructureHost.bat
