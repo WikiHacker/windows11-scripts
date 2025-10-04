@@ -208,7 +208,7 @@ PAUSE
 
 
 
-rem # DWM requires dwminit.dll to be disabled when disabling "Windows\Resources" file
+rem # Disabling dwminit.dll is required when using DWM and disabling "Windows\Resources" or screen flickers then turns black
 
 rem # DWM: OFF / sihost: OFF / Resources: OFF / SystemApps: ON = GAME CRASH / VERY SLOW
 
