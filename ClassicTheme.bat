@@ -2,6 +2,8 @@ rem # Classic Theme (Resources folder)
 
 rem # CLASSIC THEME MUST BE ENABLED OR GAMES RUN SLOW WHEN DWM IS DISABLED
 
+rem # Disabling dwminit.dll is required when using DWM and disabling "Windows\Resources" or screen flickers then turns black
+
 rem # Launch SetACL.bat to take ownership of reg keys
 cd "%~dp0"
 ECHO R | powershell.exe ./SetACL.bat
