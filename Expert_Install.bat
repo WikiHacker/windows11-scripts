@@ -58,8 +58,7 @@ cd "%~dp0"
 call DisableWindowsSecurityCenter.bat
 cd "%~dp0"
 
-rem # BORKS WMIC
-rem call DisableEventTraceSessions.bat
+call DisableEventTraceSessions.bat
 cd "%~dp0"
 
 call DisableSAM.bat
@@ -99,6 +98,9 @@ call WindowsUI_Login.bat
 cd "%~dp0"
 
 call StorAHCI.bat
+cd "%~dp0"
+
+call dwminit.bat
 cd "%~dp0"
 
 
