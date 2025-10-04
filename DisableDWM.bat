@@ -208,7 +208,7 @@ PAUSE
 
 
 
-rem # DWM depends on "Windows\Resources"
+rem # DWM requires dwminit.dll to be disabled when disabling "Windows\Resources" file
 
 rem # DWM: OFF / sihost: OFF / Resources: OFF / SystemApps: ON = GAME CRASH / VERY SLOW
 
